@@ -1,0 +1,23 @@
+h1{
+    text-align: center;
+}
+li{
+    cursor: pointer;
+}
+Nav{
+    background: #132ad8ac;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+Nav>li{
+    color: #332c2c;
+    font-size: xx-large;
+    display: inline;
+    margin-left: 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+.active{
+    background-color: red;
+}
