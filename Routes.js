@@ -14,20 +14,7 @@ const menuContent=document.querySelectorAll("li")
    console.log(routes[i].slice(1))
     // window.location.assign('/HTMLContent.html')
 });
-// menuContent.forEach((e) => {
-//     // e.setAttribute('onclick',SetRoute(routes[i]))
-//     // if (curRoute==e.getAttribute("[onclick]")){}
-//    let fullRoute=e.getAttribute('onclick')
-//     console.log(fullRoute)
-//     let pureRoute=fullRoute.substring(fullRoute.lastIndexOf('/')+1)
-//     console.log(pureRoute)
-// });
-    // let locactive=document.location.href
-    // console.log(locactive)
-   
-// function htmlturn(){
-//     window.location.assign('/HTMLContent.html')
-// }
+
 function SetRoute(routePath){
    return "window.location.assign("+"\""+routePath+"\""+")"
 }
@@ -39,5 +26,5 @@ window.addEventListener('keydown',(e)=>{
         // e.ctrlKey&&
         // alert('Cntrl and r is pressed!')
         event.preventDefault();//Prevent reload if click ok button
-        window.location.assign("/ContentMenu.html")
+        window.location.assign("/index.html")
     }})
