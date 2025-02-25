@@ -39,5 +39,5 @@ window.addEventListener('keydown',(e)=>{
         // e.ctrlKey&&
         // alert('Cntrl and r is pressed!')
         event.preventDefault();//Prevent reload if click ok button
-        window.location.assign("/ContentMenu.html")
+        window.location.assign("/index.html")
     }})
