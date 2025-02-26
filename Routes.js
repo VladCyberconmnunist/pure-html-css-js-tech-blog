@@ -2,9 +2,7 @@ let url = window.location.pathname;
 let curRoute = url.substring(url.lastIndexOf('/')+1);
 
 const menuContent=document.querySelectorAll("li")
-    // console.log(menuContent)
     const routes = ['/HTMLContent.html','/CSSContent.html','/HTMLNCSSContent.html','/JSContent.html','/SimpleProjects.html']
-    // console.log(routes)
     menuContent.forEach((e,i) => {
     e.setAttribute('onclick',SetRoute(routes[i]))
     if (curRoute==routes[i].slice(1)){
