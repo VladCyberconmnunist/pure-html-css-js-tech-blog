@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Elements Template</title>
+    <style>
+        .hideThis{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Search elements Template</h1>
+    <input type="search" id="found">
+    <ul>
+        <li> <a href="">DDDDDDD</a> </li>
+        <li> <a href="">&lt;a&gt; tag</a> </li>
+        <li><a href="">sad</a></li>
+        <li><a href="">sadfsdaf</a></li>
+        <li><a href="">sadpppppppp</a></li>
+        <li><a href="">!!!!!</a></li>
+        <li><a href="">&lt;link&gt; tag</a></li>
+        <li><a href="">&lt;href&gt; property</a></li>
+        <li><a href="">&lt;src&gt; property</a></li>
+    </ul>
+    <!-- <a href="">DDDDDDD</a>
+    <a href="">sad</a>
+    <a href="">sadfsdaf</a>
+    <a href="">sadgfhf</a>
+    <a href="">sadfsadfghaf</a>
+    <a href="">Function</a>
+    <a href="">sadfsaf</a>
+    <a href="">saadfsdaf</a>
+    <a href="">jjjjjjjjjjjjjdf</a>
+    <a href="">sadpppppppp</a>
+    <a href="">!!!!!</a> -->
+</body>
+<script>
+    // get all elements with tag "a"
+    let foundALL = document.querySelectorAll("a")
+    //get element with search value (input with Id = "found")
+    let optionFound=document.getElementById('found')
+    foundALL.forEach((e)=>{
+        console.log(e.parentNode)
+    })
+
+    //create event listener that look when value of input changes
+    optionFound.addEventListener("change",(e)=>{
+        console.log(optionFound.value)
+        //create variable contains value of input field and make to lower case 
+        let optionVal = optionFound.value.toLowerCase()
+        //get array of all elements and use function to each element
+        foundALL.forEach(element => {
+            //get array of all letters in each element and make it to lower case
+            let elemArray = element.innerHTML.toLowerCase()
+            //show it in console
+            console.log(elemArray)
+            //if array of all letters in word contains letters of search so remove hide css property
+            if (optionVal==="") {
+                element.parentNode.classList.add("hideThis")
+        //hide all elements which  dont contain option value for search
+            } 
+            else if (elemArray.includes(optionVal)){
+                element.parentNode.classList.remove("hideThis")
+            } else 
+                
+             {element.parentNode.classList.add("hideThis")}
+        })
+    })  
+</script>
+</html>
