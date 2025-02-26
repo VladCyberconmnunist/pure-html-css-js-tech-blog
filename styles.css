@@ -2,7 +2,8 @@ h1{
     text-align: center;
 }
 li{
-    cursor: pointer;
+    cursor: url("Statichand.png"),auto;
+/* cursor: pointer; */
 }
 Nav{
     background: #132ad8ac;
