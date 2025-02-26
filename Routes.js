@@ -1,7 +1,7 @@
 let url = window.location.pathname;
 let curRoute = url.substring(url.lastIndexOf('/')+1);
 
-const menuContent=document.querySelectorAll("li")
+const menuContent=document.querySelectorAll(".nav")
     const routes = ['/HTMLContent.html','/CSSContent.html','/HTMLNCSSContent.html','/JSContent.html','/SimpleProjects.html']
     menuContent.forEach((e,i) => {
     e.setAttribute('onclick',SetRoute(routes[i]))
